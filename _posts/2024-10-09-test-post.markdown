@@ -1,7 +1,0 @@
----
-layout: post
-title: "Test Post"
-date: 2024-10-09
----
-
-This is a test post to verify Jekyll is processing posts correctly.
