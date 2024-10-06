@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }} | {{ site.title }}</title>
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
@@ -16,81 +16,38 @@
             <ul>
                 <li><a href="{{ '/' | relative_url }}">Introduction</a></li>
                 <li>
-                    <a href="{{ '/OverTheWire' | relative_url }}">OverTheWire</a>
+                    <a href="{{ '/overthewire' | relative_url }}">OverTheWire</a>
                     <ul>
                         <li>
-                            <a href="{{ '/OverTheWire/Wargames' | relative_url }}">Wargames</a>
+                            <a href="{{ '/overthewire/wargames' | relative_url }}">Wargames</a>
                             <ul>
                                 <li>
-                                    <a href="{{ '/OverTheWire/Wargames/Bandit' | relative_url }}">Bandit</a>
+                                    <a href="{{ '/overthewire/wargames/bandit' | relative_url }}">Bandit</a>
                                     <ul>
-                                        {% for post in site.categories.bandit %}
-                                            <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+                                        {% for page in site.pages %}
+                                            {% if page.url contains '/overthewire/wargames/bandit/' and page.url != '/overthewire/wargames/bandit/' %}
+                                                <li><a href="{{ page.url | relative_url }}">{{ page.title }}</a></li>
+                                            {% endif %}
                                         {% endfor %}
                                     </ul>
                                 </li>
-                                <li>
-                                    <a href="#natas">Natas</a>
-                                    <ul>
-                                        {% for post in site.categories.natas %}
-                                            <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
-                                        {% endfor %}
-                                    </ul>
-                                </li>
-                                <li><a href="#leviathan">Leviathan</a></li>
-                                <li><a href="#krypton">Krypton</a></li>
-                                <li><a href="#narnia">Narnia</a></li>
-                                <li><a href="#behemoth">Behemoth</a></li>
-                                <li><a href="#utumno">Utumno</a></li>
-                                <li><a href="#maze">Maze</a></li>
-                                <li><a href="#vortex">Vortex</a></li>
-                                <li><a href="#manpage">Manpage</a></li>
-                                <li><a href="#drifter">Drifter</a></li>
-                                <li><a href="#formulaone">FormulaOne</a></li>
+                                <!-- Add other OverTheWire games similarly -->
                             </ul>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#htb">HTB</a>
+                    <a href="{{ '/htb' | relative_url }}">HTB</a>
                     <ul>
-                        <li>
-                            <a href="#htb-linux-boxes">HTB Linux Boxes</a>
-                            <ul>
-                                {% for post in site.categories.htb-linux %}
-                                    <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
-                                {% endfor %}
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#htb-windows-boxes">HTB Windows Boxes</a>
-                            <ul>
-                                {% for post in site.categories.htb-windows %}
-                                    <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
-                                {% endfor %}
-                            </ul>
-                        </li>
+                        <li><a href="{{ '/htb/linux' | relative_url }}">Linux Boxes</a></li>
+                        <li><a href="{{ '/htb/windows' | relative_url }}">Windows Boxes</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#thm">THM</a>
+                    <a href="{{ '/thm' | relative_url }}">THM</a>
                     <ul>
-                        <li>
-                            <a href="#thm-linux-boxes">THM Linux Boxes</a>
-                            <ul>
-                                {% for post in site.categories.thm-linux %}
-                                    <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
-                                {% endfor %}
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#thm-windows-boxes">THM Windows Boxes</a>
-                            <ul>
-                                {% for post in site.categories.thm-windows %}
-                                    <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
-                                {% endfor %}
-                            </ul>
-                        </li>
+                        <li><a href="{{ '/thm/linux' | relative_url }}">Linux Boxes</a></li>
+                        <li><a href="{{ '/thm/windows' | relative_url }}">Windows Boxes</a></li>
                     </ul>
                 </li>
             </ul>

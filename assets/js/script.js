@@ -216,3 +216,29 @@ window.addEventListener('scroll', () => {
 scrollToTopButton.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+
+// Expand/collapse sidebar submenus
+const sidebarSubmenus = document.querySelectorAll('.sidebar-nav > ul > li > ul');
+sidebarSubmenus.forEach(submenu => {
+    const parentLink = submenu.previousElementSibling;
+    parentLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        submenu.style.display = submenu.style.display === 'none' ? 'block' : 'none';
+    });
+});
+
+// Initialize submenus as collapsed on mobile
+function initializeSubmenus() {
+    if (window.innerWidth <= 768) {
+        sidebarSubmenus.forEach(submenu => {
+            submenu.style.display = 'none';
+        });
+    } else {
+        sidebarSubmenus.forEach(submenu => {
+            submenu.style.display = 'block';
+        });
+    }
+}
+
+window.addEventListener('resize', initializeSubmenus);
+initializeSubmenus(); // Call once on load

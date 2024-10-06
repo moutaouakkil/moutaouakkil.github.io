@@ -1,12 +1,72 @@
-title: Your Site Title
-description: Your site description
-baseurl: ""
-url: "https://moutaouakkil.github.io"
+# Site settings
+title: Othmane Moutaouakkil's Ethical Hacking Journey
+email: contact@otmnmt.com
+description: >- 
+  Documenting my progress and insights in ethical hacking and cybersecurity.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://moutaouakkil.github.io" 
+twitter_username: otmnmt
+github_username:  moutaouakkil
 
+# Build settings
 markdown: kramdown
 theme: minima
-
 plugins:
   - jekyll-feed
 
-permalink: /:year/:month/:day/:title/
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# Collections
+collections:
+  overthewire:
+    output: true
+    permalink: /:collection/:name/
+  htb:
+    output: true
+    permalink: /:collection/:name/
+  thm:
+    output: true
+    permalink: /:collection/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "overthewire"
+    values:
+      layout: "writeup"
+  - scope:
+      path: ""
+      type: "htb"
+    values:
+      layout: "writeup"
+  - scope:
+      path: ""
+      type: "thm"
+    values:
+      layout: "writeup"
+
+# Pagination
+paginate: 5
+paginate_path: "/blog/page:num/"
+
+# Other settings
+permalink: /:categories/:title/

@@ -28,7 +28,7 @@ body, html {
     margin: auto;
     overflow: hidden;
     padding: 20px;
-    padding-top: 80px; /* Increased padding to account for fixed navbar */
+    padding-top: 80px;
 }
 
 nav {
@@ -197,13 +197,6 @@ code {
     word-wrap: break-word;
 }
 
-/* GitHub-like syntax highlighting */
-.keyword { color: #d73a49; }
-.string { color: #032f62; }
-.comment { color: #6a737d; }
-.number { color: #005cc5; }
-.operator { color: #d73a49; }
-
 /* Sidebar styles */
 .sidebar {
     position: fixed;
@@ -345,7 +338,7 @@ body:not(.light-theme) .operator { color: #d4d4d4; }
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: auto;
+        width: 100%;
         transition: right 0.5s ease;
         padding: 1rem;
     }
@@ -387,8 +380,14 @@ body:not(.light-theme) .operator { color: #d4d4d4; }
         left: 0;
     }
 
+    .toggle-sidebar {
+        display: block;
+        top: 70px;
+    }
+
     .container {
         margin-left: 0;
+        padding-top: 100px;
     }
 }
 
