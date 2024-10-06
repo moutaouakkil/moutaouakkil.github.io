@@ -1,32 +1,12 @@
 title: Your Site Title
+description: Your site description
 baseurl: ""
 url: "https://moutaouakkil.github.io"
 
 markdown: kramdown
 theme: minima
 
-permalink: /:categories/:title/
-
 plugins:
   - jekyll-feed
 
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
-
-defaults:
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-
-collections:
-  overthewire:
-    output: true
-    permalink: /:collection/:name/
+permalink: /:year/:month/:day/:title/

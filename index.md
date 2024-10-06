@@ -2,14 +2,10 @@
 layout: home
 ---
 
-# Welcome to My Ethical Hacking Journey
-
-## Recent Posts
+# Welcome to My Site
 
 {% for post in site.posts %}
   <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
   <p>{{ post.date | date_to_string }}</p>
-  <p>{{ post.excerpt }}</p>
+  {{ post.excerpt }}
 {% endfor %}
-
-[View all OverTheWire posts](/overthewire/)
