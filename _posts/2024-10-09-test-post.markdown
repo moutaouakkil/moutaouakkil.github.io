@@ -4,11 +4,4 @@ title: "Test Post"
 date: 2024-10-09
 ---
 
----
-layout: post
-title:  "Welcome to Jekyll!"
-date:   2024-10-06 21:16:16 +0200
-categories: jekyll update
----
-
 This is a test post to verify Jekyll is processing posts correctly.
