@@ -1,7 +1,7 @@
 ---
 layout: page
 title: OverTheWire
-permalink: /overthewire/
+permalink: /overthewire
 ---
 
 # OverTheWire Writeups

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: OverTheWire
-permalink: /overthewire/wargames/
+permalink: /overthewire/wargames/bandit
 ---
 
 # OverTheWire Writeups
