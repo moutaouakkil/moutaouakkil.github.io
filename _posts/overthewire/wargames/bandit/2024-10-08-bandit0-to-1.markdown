@@ -1,9 +1,9 @@
 ---
-layout: post
-title: "Bandit Level 0 to 1"
-date: 2024-10-08
-categories: [overthewire, wargames, bandit]
+layout: page
+title: OverTheWire Wargames
+permalink: /overthewire/wargames/bandit
 ---
+
 
 # Bandit Level 0 to 1
 
