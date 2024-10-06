@@ -11,3 +11,5 @@ layout: home
   <p>{{ post.date | date_to_string }}</p>
   <p>{{ post.excerpt }}</p>
 {% endfor %}
+
+[View all OverTheWire posts](/overthewire/)

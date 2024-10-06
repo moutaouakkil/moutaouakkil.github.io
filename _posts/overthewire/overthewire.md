@@ -1,7 +1,7 @@
 ---
-layout: category
+layout: page
 title: OverTheWire
-category: overthewire
+permalink: /overthewire/
 ---
 
 # OverTheWire Writeups
