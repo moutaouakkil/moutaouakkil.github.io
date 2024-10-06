@@ -19,42 +19,13 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Your Site Title
-description: Your site description
 baseurl: "" # leave this empty for user sites
 url: "https://moutaouakkil.github.io"
 
-# Build settings
 markdown: kramdown
 theme: minima
-plugins:
-  - jekyll-feed
 
-# Exclude from processing
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
-
-# Permalinks
 permalink: /:categories/:title/
-
-# Collections
-collections:
-  overthewire:
-    output: true
-    permalink: /:collection/:name/
-
-# Defaults
-defaults:
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "default"
 
 # Exclude from processing.
 # The following items will not be processed, by default.
